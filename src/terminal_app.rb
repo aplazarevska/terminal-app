@@ -3,6 +3,10 @@ require 'ruby_figlet'
 using RubyFiglet 
 
 
+require "tty-prompt"
+prompt = TTY::Prompt.new
+
+
 welcome = "Welcome \n reader."
 welcome.art!
 
@@ -24,13 +28,12 @@ print "\n \n Press enter to proceed."
 
 enter = gets
 
-puts "\n If you want to read a book choose option 1 or 2. If you want to personalise a book choose option 3."
+
 
 
 menu_options = ["1. The Adventure of the Crooked Coder", "2. The Adventure of the Ruby Gem", "3. Personalised Story", "4. Exit"]
 # puts menu_options
-menu_options.each do |title|
-    p "#{title}"
-end
-
-
+prompt.select("\n If you want to read a book choose option 1 or 2. If you want to personalise a book choose option 3.", menu_options)
+# menu_options.each do |title|
+#     p "#{title}"
+# end
