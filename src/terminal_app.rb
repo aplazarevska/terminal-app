@@ -43,8 +43,12 @@ when options == "1. The Adventure of the Crooked Coder"
         answer.choice "A local musician who did not want to perform at Nency and her husband's wedding"
     end
 when options == "2. The Adventure of the Ruby Gem"
-    story2 = Story.new("The Adventure of the Ruby Gem", "Alexander Holder is a coder who made loan to a rich person and got ruby gems bundle as collateral. Alexander Holder installed the bundle on his laptop. That night he hears noise, sees his son doing something on the laptop. His geek niece then comes and faints after seeing the laptop in the son’s hands.")
+    story2 = Story.new("The Adventure of the Ruby Gem", "Alexander Holder is a coder who made loan to a rich person and got ruby gems bundle as collateral. Alexander Holder installed the bundle on his laptop. That night he hears noise, sees his son doing something on the laptop.")
     story2.display_details()
+    menu_story2_1 = prompt.select("\n What happened next?") do |answer|
+        answer.choice "His geek niece then comes and faints after seeing the laptop in the son’s hands."
+        answer.choice "His dog starts barking and the son drops the laptop and it breaks."
+    end
 when options == "3. Personalised Story"
     personalised = "Your story"
     p personalised
