@@ -11,6 +11,8 @@ prompt = TTY::Prompt.new
 
 require "tty-box"
 
+require 'colorize'
+
 # welcome = "Welcome \n reader."
 # welcome.art!
 
@@ -28,7 +30,7 @@ require "tty-box"
 #     sleep 0.05
 # end
 
-print "\n Press enter to proceed."
+print "\n Press enter to proceed.".colorize(:red)
 
 enter = gets
 
@@ -59,7 +61,7 @@ when options == "1. The Adventure of the Crooked Coder"
                 if menu_story1_2 == "When the husband saw Henry through the window he recognised him, got so terrified that he got internal bleeding and died."
                     story1_part3 = Part3.new("The Adventure of the Crooked Coder", "When the husband saw Henry through the window he recognised him, got so terrified that he got internal bleeding and died, and Nancy fainted. Henry seeing what happened wanted to get help, took the key, but decided to just flee so he would not become a suspect. He took his mongoose and went out throughout the window. He lost his walking stick. Coroner found out that the husband died before he hit his head on the table falling down after experiencing the internal bleeding. David was reference to a biblical character king who sent a love rival to war just to get his wife.")
                     story1_part3.display_details()
-                    puts "\n Press enter to continue." 
+                    puts "\n Press enter to continue.".colorize(:red) 
                     enter = gets
                     original1 = Inspiration.new("The Adventure of the Crooked Coder", "The Adventure of the Crooked Man", "Arthur Conan Doyle") 
                     original1.inspired_by()
@@ -69,7 +71,7 @@ when options == "1. The Adventure of the Crooked Coder"
                         "\n Crickat bet? I bet you have a spelling error!"
                     end
                     print box    
-                    puts "Try again! Press enter to continue." 
+                    puts "Try again! Press enter to continue.".colorize(:red) 
                     enter = gets
                 end
             end
@@ -79,7 +81,7 @@ when options == "1. The Adventure of the Crooked Coder"
                 "\n Seriously? A musician who didn’t want to perform at their wedding?? You would not make a very good script writer!"
             end
             print box    
-            puts "Try again! Press enter to continue." 
+            puts "Try again! Press enter to continue.".colorize(:red) 
             enter = gets
         end
     end
@@ -102,7 +104,7 @@ when options == "2. The Adventure of the Ruby Gem"
                 if menu_story2_2 == "The niece is in a league with a hacker."
                     story2_part3 = Part3.new("The Adventure of the Ruby Gem", "The niece is in a league with a hacker, but she doesn’t know that he is a hacker. The jealous hacker wants to steal the gems, so Alexander Holder can’t finish his ruby app. The son out of love for the niece did not tell that she passed the laptop to the criminal through the window. The laptop was broken when the son fought the hacker for it. Before the son could intervene, the hacker managed to steal three gems. The gems are returned after Sherlock Holmes threatens the thief with a gun. ‘Stop, or I will shoot’, said Holmes, and the hacker gave him back the gems.")
                     story2_part3.display_details()
-                    puts "\n Press enter to continue." 
+                    puts "\n Press enter to continue.".colorize(:red) 
                     enter = gets
                     original2 = Inspiration.new("The Adventure of the Ruby Gem", "The Adventure of the Beryl Coronet", "Arthur Conan Doyle") 
                     original2.inspired_by
@@ -112,7 +114,7 @@ when options == "2. The Adventure of the Ruby Gem"
                         "\n What a preposterous idea! No one can be better coder than Alexander Holder!"
                     end
                     print box   
-                    puts "Try again! Press enter to continue." 
+                    puts "Try again! Press enter to continue.".colorize(:red) 
                     enter = gets 
                 end
             end
@@ -122,7 +124,7 @@ when options == "2. The Adventure of the Ruby Gem"
                 "\n Who mentioned any dog in this story? You have a bad memory!"
             end
             print box    
-            puts "Try again! Press enter to continue." 
+            puts "Try again! Press enter to continue.".colorize(:red) 
             enter = gets
         end
     end
@@ -130,5 +132,5 @@ when options == "3. Personalised Story"
     personalised = "Your story"
     p personalised
 else
-    p "Thank you for reading!"
+    puts "Thank you for reading!".colorize(:red)
 end

@@ -4,7 +4,7 @@ class Story
        @body = body
     end
     def display_details()
-       puts "\n You are reading '#@title' \n"
+       puts "\n You are reading '#@title' \n".colorize(:red)
        puts "\n #@body"
     end
  end
