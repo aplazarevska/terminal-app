@@ -56,6 +56,12 @@ when options == "2. The Adventure of the Ruby Gem"
         answer.choice "His geek niece then comes and faints after seeing the laptop in the son’s hands."
         answer.choice "His dog starts barking and the son drops the laptop and it breaks."
     end
+    if menu_story2_1 == "His geek niece then comes and faints after seeing the laptop in the son’s hands."
+        story2_part2 = Part2.new("The Adventure of the Ruby Gem", "His geek niece then comes and faints after seeing the laptop in the son’s hands. The laptop falls down and is damaged. Three gems are deleted, and Alexander Holder goes to Sherlock Holmes. The son doesn’t appear suspect to Holmes. He wonders: why isn’t the son giving a statement, how could he bend the laptop with his hands. The reputation of Alexander Holder depends on solving this case. Sherlock investigates.")
+        story2_part2.display_details()
+    else 
+        p "Wrong Answer"
+    end
 when options == "3. Personalised Story"
     personalised = "Your story"
     p personalised
