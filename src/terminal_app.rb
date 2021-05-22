@@ -10,22 +10,22 @@ prompt = TTY::Prompt.new
 
 require "tty-box"
 
-# welcome = "Welcome \n reader."
-# welcome.art!
+welcome = "Welcome \n reader."
+welcome.art!
 
-# welcome.each_char do |char|
-#     putc char
-#     $stdout.flush
-#     sleep 0.01
-# end
+welcome.each_char do |char|
+    putc char
+    $stdout.flush
+    sleep 0.01
+end
 
-# welcome_message = "\n You are about to set on a reading adventure. \n Where the story will take you depends solely on you.\n"
+welcome_message = "\n You are about to set on a reading adventure. \n Where the story will take you depends solely on you.\n"
 
-# welcome_message.each_char do |char|
-#     putc char
-#     $stdout.flush
-#     sleep 0.05
-# end
+welcome_message.each_char do |char|
+    putc char
+    $stdout.flush
+    sleep 0.05
+end
 
 print "\n Press enter to proceed."
 
@@ -78,6 +78,19 @@ when options == "2. The Adventure of the Ruby Gem"
     if menu_story2_1 == "His geek niece then comes and faints after seeing the laptop in the son’s hands."
         story2_part2 = Part2.new("The Adventure of the Ruby Gem", "His geek niece then comes and faints after seeing the laptop in the son’s hands. The laptop falls down and is damaged. Three gems are deleted, and Alexander Holder goes to Sherlock Holmes. The son doesn’t appear suspect to Holmes. He wonders: why isn’t the son giving a statement, how could he bend the laptop with his hands. The reputation of Alexander Holder depends on solving this case. Sherlock investigates.")
         story2_part2.display_details()
+        menu_story2_2 = prompt.select("\n What did Sherlock Holmes find out?") do |answer|
+            answer.choice "The son wanted to delete the gems cos he wanted to be seen as better coder than his father."
+            answer.choice "The niece is in a league with a hacker."    
+        end
+        if menu_story2_2 == "The niece is in a league with a hacker."
+            story2_part3 = Part3.new("The Adventure of the Ruby Gem", "The niece is in a league with a hacker, but she doesn’t know that he is a hacker. The jealous hacker wants to steal the gems, so Alexander Holder can’t finish his ruby app. The son out of love for the niece did not tell that she passed the laptop to the criminal through the window. The laptop was broken when the son fought the hacker for it. Before the son could intervene, the hacker managed to steal three gems. The gems are returned after Sherlock Holmes threatens the thief with a gun. ‘Stop, or I will shoot’, said Holmes, and the hacker gave him back the gems.")
+            story2_part3.display_details()
+        else
+            box = TTY::Box.frame(width: 40, height: 8, title: {top_left: " FatalError "}) do
+                "\n What a preposterous idea! No one can be better coder than Alexander Holder!"
+            end
+            print box    
+        end
     else 
         box = TTY::Box.frame(width: 40, height: 8, title: {top_left: " NoMemoryError "}) do
             "\n Who mentioned any dog in this story? You have a bad memory!"
