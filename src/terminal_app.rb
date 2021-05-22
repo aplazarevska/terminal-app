@@ -130,7 +130,7 @@ when options == "2. The Adventure of the Ruby Gem"
         end
     end
 when options == "3. Personalised Story"
-    your_story = PersonalisedStory.new(@female_name, @profession, @male_relation, @derogative_word, @male_name_and_last_name, @adjective_of_a_country, @company_name, @another_country)
+    your_story = PersonalisedStory.new(@female_name, @profession, @male_relation, @derogative_word, @male_name_and_last_name, @adjective_of_a_country, @company_name, @another_country, @animal)
     your_story.new_story()
     puts "\n Press enter to continue.".colorize(:red) 
     enter = gets

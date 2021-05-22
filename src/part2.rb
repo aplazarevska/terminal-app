@@ -5,6 +5,6 @@ class Part2
     end
     def display_details()
        puts "\n Correct! You are now reading part 2 of '#@title' \n".colorize(:red)
-       puts "\n #@body"
+       puts "\n #@body".colorize(:blue)
     end
 end
