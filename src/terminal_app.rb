@@ -7,6 +7,8 @@ using RubyFiglet
 require "tty-prompt"
 prompt = TTY::Prompt.new
 
+require "tty-box"
+
 welcome = "Welcome \n reader."
 welcome.art!
 
@@ -47,7 +49,10 @@ when options == "1. The Adventure of the Crooked Coder"
         story1_part2 = Part2.new("The Adventure of the Crooked Coder", "He was a coder in the Indian company ‘Rebellion of 1857’, and was a rival to the husband for Nancy’s hand. The husband in that time worked for the same company, and messed with Henry’s code, so Henry was fired, and found out that the husband betrayed him so he could get Nancy. Living a tough life Henry became deformed, and went back to England as an old man. Accidentally he met Nancy that fatal day. He followed her home, saw the argument from the window. The husband saw Henry through the window and recognised him.")
         story1_part2.display_details()
     else 
-        p "Wrong Answer"
+        box = TTY::Box.frame(width: 40, height: 8, title: {top_left: " Script Error "}) do
+            "\n Seriously? A musician who didn’t want to perform at their wedding?? You would not make a very good script writer!"
+        end
+        print box    
     end
 when options == "2. The Adventure of the Ruby Gem"
     story2 = Story.new("The Adventure of the Ruby Gem", "Alexander Holder is a coder who made loan to a rich person and got ruby gems bundle as collateral. Alexander Holder installed the bundle on his laptop. That night he hears noise, sees his son doing something on the laptop.")
