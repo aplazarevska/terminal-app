@@ -7,4 +7,4 @@ class Story
        puts "\n You are reading '#@title' \n".colorize(:red)
        puts "\n #@body"
     end
- end
+end
