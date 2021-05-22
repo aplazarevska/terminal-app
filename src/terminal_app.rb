@@ -1,5 +1,6 @@
 require_relative "./story.rb"
 require_relative "./part2.rb"
+require_relative "./part3.rb"
 
 require 'ruby_figlet'
 using RubyFiglet 
@@ -48,8 +49,21 @@ when options == "1. The Adventure of the Crooked Coder"
     if menu_story1_1 == "A coder in the Indian company 'Rebellion of 1857'"
         story1_part2 = Part2.new("The Adventure of the Crooked Coder", "He was a coder in the Indian company ‘Rebellion of 1857’, and was a rival to the husband for Nancy’s hand. The husband in that time worked for the same company, and messed with Henry’s code, so Henry was fired, and found out that the husband betrayed him so he could get Nancy. Living a tough life Henry became deformed, and went back to England as an old man. Accidentally he met Nancy that fatal day. He followed her home, saw the argument from the window. The husband saw Henry through the window and recognised him.")
         story1_part2.display_details()
+        menu_story1_2 = prompt.select("\n How did the husband die?") do |answer|
+            answer.choice "When the husband saw Henry through the window he recognised him, got so terrified that he got internal bleeding and died."
+            answer.choice "Henry struck him on the head with an Indian crickat bet."    
+        end
+        if menu_story1_2 == "When the husband saw Henry through the window he recognised him, got so terrified that he got internal bleeding and died."
+            story1_part3 = Part3.new("The Adventure of the Crooked Coder", "When the husband saw Henry through the window he recognised him, got so terrified that he got internal bleeding and died, and Nancy fainted. Henry seeing what happened wanted to get help, took the key, but decided to just flee so he would not become a suspect. He took his mongoose and went out throughout the window. He lost his walking stick. Coroner found out that the husband died before he hit his head on the table falling down after experiencing the internal bleeding. David was reference to a biblical character king who sent a love rival to war just to get his wife.")
+            story1_part3.display_details()
+        else
+            box = TTY::Box.frame(width: 40, height: 8, title: {top_left: " NameError "}) do
+                "\n Crickat bet? I bet you have a spelling error!"
+            end
+            print box    
+        end
     else 
-        box = TTY::Box.frame(width: 40, title: {top_left: " Script Error "}) do
+        box = TTY::Box.frame(width: 40, height: 8, title: {top_left: " ScriptError "}) do
             "\n Seriously? A musician who didn’t want to perform at their wedding?? You would not make a very good script writer!"
         end
         print box    
@@ -65,7 +79,7 @@ when options == "2. The Adventure of the Ruby Gem"
         story2_part2 = Part2.new("The Adventure of the Ruby Gem", "His geek niece then comes and faints after seeing the laptop in the son’s hands. The laptop falls down and is damaged. Three gems are deleted, and Alexander Holder goes to Sherlock Holmes. The son doesn’t appear suspect to Holmes. He wonders: why isn’t the son giving a statement, how could he bend the laptop with his hands. The reputation of Alexander Holder depends on solving this case. Sherlock investigates.")
         story2_part2.display_details()
     else 
-        box = TTY::Box.frame(width: 40, height: 8, title: {top_left: " No Memory Error "}) do
+        box = TTY::Box.frame(width: 40, height: 8, title: {top_left: " NoMemoryError "}) do
             "\n Who mentioned any dog in this story? You have a bad memory!"
         end
         print box    
