@@ -44,7 +44,7 @@ There is no option for errors, as the user input is included in the story in wha
 
 # Control Flow Diagram
 
-![terminal_app](/Users/Ana/Documents/CA/AnaLazarevska_T1A3/docs/terminal_app.png)
+![terminal_app](./docs/terminal_app.png)
 
 
 
@@ -56,15 +56,15 @@ Access the Trello Board for the Terminal App: https://trello.com/b/xwi6vsz5
 
 **SCREENSHOTS**
 
-![Trello_board](/Users/Ana/Documents/CA/AnaLazarevska_T1A3/docs/Trello_screen_shots/Trello_board.png)
+![Trello_board](./docs/Trello_screen_shots/Trello_board.png)
 
-![Start_of_activity](/Users/Ana/Documents/CA/AnaLazarevska_T1A3/docs/Trello_screen_shots/Start_of_activity.png)
+![Start_of_activity](./docs/Trello_screen_shots/Start_of_activity.png)
 
 
 
 For more detailed activity use the View member's board activity option in Trello.
 
-![View_activity](/Users/Ana/Documents/CA/AnaLazarevska_T1A3/docs/Trello_screen_shots/View_activity.png)
+![View_activity](./docs/Trello_screen_shots/View_activity.png)
 
 
 
